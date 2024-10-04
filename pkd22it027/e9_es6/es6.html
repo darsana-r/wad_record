@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Let Var Const</h1>
+    <p id="inside"></p>
+    <p id="outside"></p>
+    <p id="inside_block"></p>
+
+    <h1>arrow function</h1>
+    <p id="arrow"></p>
+
+    <h1>spread operator</h1>
+    <p id="spread"></p>
+    
+    <script>
+        var x=1;
+        let y=2;
+        const z=3;
+
+        {
+            var a=3;
+            let b=4;
+            const c=5;
+            
+            {
+                let d=7;
+                document.getElementById("inside_block").innerHTML="a="+a+" b="+b+" c="+c
+            }
+            document.getElementById("inside").innerHTML="a="+a+" b="+b+" c="+c 
+            document.getElementById("outside").innerHTML="x="+x+" y="+y+" z="+z
+        }
+
+
+        let demo = (a,b)=>{
+            return(a*b);
+
+        }
+        document.getElementById("arrow").innerHTML= "4 x 5 = "+demo(4,5)
+        
+        const arr1=[1,2,3,4];
+        const arr2=[5,6,7];
+        const spread=[...arr1,...arr2];
+
+        document.getElementById("spread").innerHTML="combined result of arr1 ["+arr1+"] and arr2 [ "+arr2 +"] is = [ "+spread+" ]";
+
+    </script>
+
+</body>
+</html>
