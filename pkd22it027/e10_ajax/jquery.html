@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+</head>
+<body>
+
+    <center>
+        <h1>CLICK ON THE FOLLOWING TEXTS</h1>
+        <p class="hide">CLICK TO DISAPPEAR!</p>
+        <P class="hide">THE PREVIOUS TEXT DISAPPEARED.NOW CLICK ME!</P>
+        <P class="hide">I AM ALSO BEING DISAPPEARED...</P>
+        <P class="show">JQuery is amazing...</P>
+        <button id="button">click me</button>
+        <h2>This will be disappeared</h2>
+        <button id="bbox">Hide</button><br><br>
+        <div id="box" style="width:100px; height: 100px;background-color: rgb(54, 103, 136);"></div>
+    </center>
+
+    <script>
+    $(document).ready(function(){
+        $(".hide").click(function(){
+          $(this).hide();
+        });
+
+        $(".show").click(function(){
+            $(this).css('color', 'red');
+        });
+
+        $("#button").click(function(){
+            $("h2").hide();
+        });
+
+        $("#bbox").click(function(){
+            $("#box").hide();
+        })
+      });
+
+    </script>
+</body>
+</html>

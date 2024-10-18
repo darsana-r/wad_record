@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+
+<body>
+<center>
+    <div id="demo">
+        <h1>LEARN AJAX</h1>
+        <button onclick="loadDoc()">click to view more</button>
+    </div>
+</center>
+
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                document.getElementById("demo").innerHTML =
+                    this.responseText;
+            };
+            xhttp.open("GET", "ajax_info.html", true);
+            xhttp.send();
+        }
+    </script>
+</body>
+
+</html>
